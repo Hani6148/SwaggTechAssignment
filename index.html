@@ -1,9 +1,10 @@
 <html>
   <head>
     <title>Swagup.com</title>
+		<link rel="shortcut icon" type="image/png" href="favicon.png">
     <style>
         header img {
-        width: 40%;
+        width: 60%;
         height: 20%;
         margin: auto;
         display: block;
@@ -27,13 +28,17 @@
         text-decoration: none;;
         color:rgb(67, 77, 92)
       }
+			body {
+				background-color: #fafafa;
+			}
       form {
     width: 500px;
     margin: 50px auto;
-    padding: 30px;
+    padding: 40px;
     border: 1px solid #ccc;
-    box-shadow: 2px 2px 5px #ccc;
-    border-radius: 10px;
+    box-shadow: 6px 6px 6px #ccc;
+    border-radius: 30px;
+		background-color: white;
   }
 
   label {
@@ -42,20 +47,23 @@
     color: rgb(67, 77, 92);
   }
 
-  input[type="text"], input[type="email"], input[type="password"] {
+  input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
   }
 
   input[type="submit"] {
-    width: 100%;
+    width: 40%;
+		height: 45px;
     padding: 10px;
     margin-top: 20px;
+		margin: auto;
+  	display: block;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     background-color: #3577d3;
     color: white;
     cursor: pointer;
@@ -68,41 +76,47 @@
   </head>
   <body>
     <header>
-      <img src="https://static.wixstatic.com/media/004200_384da8594c00494298ec482d8ebbe915~mv2.png" alt="Swagup logo">
+      <img src="https://static.wixstatic.com/media/004200_384da8594c00494298ec482d8ebbe915~mv2.png" alt="SwagUp Logo">
     </header>
     <br>
     <nav>
       <ul>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Platform</a></li>
-        <li><a href="#">Gifts</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Pricing</a></li>
+        <li><a href="https://www.swagup.com/dashboard/custom-swag-packs/catalog" target="_blank">Products</a></li>
+        <li><a href="https://www.swagup.com/services" target="_blank">Platform</a></li>
+        <li><a href="https://www.swagup.com/company" target="_blank">About Us</a></li>
+        <li><a href="https://www.swagup.com/pricing" target="_blank">Pricing</a></li>
       </ul>
     </nav>
-    
+		<br>
     <form>
-        <label for="name">Full Name:</label>
-        <input type="text" id="first-name">
+        <label for="name">Full Name <span style="color: red">*</span></label>
+        <input type="text" id="first-name" required>
         <br>
-        <label for="email">Email:</label>
-        <input type="email" id="last-name">
+        <label for="email">Email <span style="color: red">*</span></label>
+        <input type="email" id="last-name" required>
         <br>
-        <label for="Address">Mailing Address:</label>
-        <input type="text" id="Address">
-        <label for="Address2">Mailing Address 2:</label>
-        <input type="text" id="Address2">
+        <label for="password">Password <span style="color: red">*</span></label>
+        <input type="password" id="password" required>
         <br>
-        <label for="card-number">Phone Number:</label>
-        <input type="text" id="card-number">
+        <label for="mailing-address">Mailing Address <span style="color: red">*</span></label>
+        <input type="text" id="mailing-address" required>
+				<br>
+        <label for="phone-number">Phone Number <span style="color: red">*</span> (Dashes not required)</label>
+        <input type="tel" id="phone-number" required>
         <br>
-        <label for="credit-card">Credit Card Number (You won't be charged - just verification purposes)</label>
-        <input type="text" id="credit-card">
+        <label for="credit-card-number">Credit Card Number <span style="color: red">*</span> (You won't be charged - used for verification purposes)</label>
+        <input type="text" id="credit-card-number" required>
         <br>
-        <label for="security-code">Security Code:</label>
-        <input type="text" id="security-code">
+				<label for="expiration">Expiration (mm/yr) <span style="color: red">*</span></label>
+        <input type="text" id="expiration" required>
+				<br>
+        <label for="security-code">Security Code (CVC) <span style="color: red">*</span></label>
+        <input type="text" id="security-code" required>
         <br>
-        <input type="submit" value="Submit" onclick="alert('Gotcha!')">
+				<br>
+				<span style="color: red">*</span> Indicates required field
+				<br><br>
+        <input type="submit" style="font-size:16px;font-weight:bold" value="Create Profile" onclick="alert('Gotcha Ali! ;\))">
         </form>
   </body>
 </html>
